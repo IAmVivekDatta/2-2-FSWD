@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+
+    <h3>Registration Form</h3>
+    
+    <table  cellpadding="8" cellspacing="5">
+        <tr>
+            <td>Enter Username:</td>
+            <td><input type="text" name="username" required></td>
+        </tr>
+
+        <tr>
+            <td>Enter Password:</td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+
+        <tr>
+            <td>Enter Mobile Number:</td>
+            <td><input type="tel" name="mobile" pattern="[0-9]{10}" required></td>
+        </tr>
+
+        <tr>
+            <td>Date of Birth:</td>
+            <td><input type="date" name="dob" required></td>
+        </tr>
+
+        <tr>
+            <td>Enter Hobbies:</td>
+            <td>
+                <input type="checkbox" name="hobby" value="Book Reading"> Book Reading
+                <input type="checkbox" name="hobby" value="Travelling"> Travelling
+                <input type="checkbox" name="hobby" value="Singing"> Singing
+                <input type="checkbox" name="hobby" value="Dancing"> Dancing
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Gender:</td>
+            <td>
+                <input type="radio" name="gender" value="male" required> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="transgender"> Transgender
+            </td>
+        </tr>
+
+        <tr>
+            <td>Select Qualification:</td>
+            <td>
+                <select name="qualification">
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="B.Sc">B.Sc</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="MBA">M.B.A</option>
+                    <option value="B.Arch">B.Arch</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Address:</td>
+            <td><textarea rows="4" cols="30" name="address" placeholder="Enter your address"></textarea></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Register">
+                <input type="reset" value="clear">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+    

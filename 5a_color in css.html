@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Colors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .color-name {
+            color: red;
+        }
+        .hex-color {
+            color: #00ff00;
+        }
+        .rgb-color {
+            color: rgb(0, 0, 255);
+        }
+        .rgba-color {
+            color: rgba(255, 165, 0, 0.5);
+        }
+        .hsl-color {
+            color: hsl(120, 100%, 50%);
+        }
+        .hsla-color {
+            color: hsla(240, 100%, 50%, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Colors (Internal styles)</h1>
+    <div style="border: 1px solid #000; border-radius: 10px; padding: 10px; margin-bottom: 20px;">
+        <p class="color-name">This text is red using color name.</p>
+        <p class="hex-color">This text is green using hex color code.</p>
+        <p class="rgb-color">This text is blue using RGB color code.</p>
+        <p class="rgba-color">This text is orange with 50% opacity using RGBA color code.</p>
+        <p class="hsl-color">This text is green using HSL color code.</p>
+        <p class="hsla-color">This text is blue with 50% opacity using HSLA color code.</p>
+    </div>
+    <h1>Inline color syntax</h1>
+    <div style="border: 1px solid #000; border-radius: 10px; padding: 10px;">
+        <p style="color: red;">This text is red using inline color name.</p>
+        <p style="color: #00ff00;">This text is green using inline hex color code.</p>
+        <p style="color: rgb(0, 0, 255);">This text is blue using inline RGB color code.</p>
+        <p style="color: rgba(255, 165, 0, 0.5);">This text is orange with 50% opacity using inline RGBA color code.</p>
+        <p style="color: hsl(120, 100%, 50%);">This text is green using inline HSL color code.</p>
+        <p style="color: hsla(240, 100%, 50%, 0.5);">This text is blue with 50% opacity using inline HSLA color code.</p>
+    </div>
+</body>
+</html>

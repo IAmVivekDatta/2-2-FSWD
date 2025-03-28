@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Table Example</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <table border="1"></table>
+
+    <!-- Creating a table with a border -->
+    <table border="1">
+        <caption>Student Data</caption>
+        <!-- First row: Table Headers -->
+        <tr>
+            <th rowspan="2">Student Name</th> <!-- Spans 2 rows -->
+            <th colspan="3">Subjects</th> <!-- Spans 3 columns -->
+        </tr>
+        
+        <!-- Second row: Subject Headers -->
+        <tr>
+            <th>Math</th>
+            <th>Science</th>
+            <th>History</th>
+        </tr>
+
+        <!-- Student data rows -->
+        <tr>
+            <td>John Doe</td>
+            <td>85</td>
+            <td>90</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>Jane Smith</td>
+            <td>92</td>
+            <td>88</td>
+            <td>84</td>
+        </tr>
+        <tr>
+            <td>Emily Johnson</td>
+            <td>75</td>
+            <td>95</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+</body>
+</html>

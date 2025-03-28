@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Selectors Example</title>
+    <style>
+        /* Simple Selectors */
+        /* Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* ID Selector */
+        #unique {
+            font-weight: bold;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Group Selector */
+        h1, h2, h3 {
+            color: green;
+        }
+
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Combinator Selectors */
+        /* Descendant Selector */
+        div p {
+            color: red;
+        }
+
+        /* Child Selector */
+        ul > li {
+            list-style-type: none;
+        }
+
+        /* Adjacent Sibling Selector */
+        h1 + p {
+            margin-top: 20px;
+        }
+
+        /* General Sibling Selector */
+        h1 ~ p {
+            color: purple;
+        }
+
+        /* Pseudo-class Selectors */
+        a:hover {
+            color: orange;
+        }
+
+        input:focus {
+            border-color: red;
+        }
+
+        /* Pseudo-element Selectors */
+        p::first-line {
+            font-size: 1.5em;
+        }
+
+        p::before {
+            content: "Note: ";
+            font-weight: bold;
+        }
+
+        /* Attribute Selectors */
+        input[type="text"] {
+            border: 1px solid black;
+        }
+
+        a[target="_blank"] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <p>This is a paragraph.</p>
+    <p id="unique">This is a unique paragraph.</p>
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <div>
+        <p>This paragraph is inside a div.</p>
+    </div>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+    </ul>
+    <h1>Another Heading 1</h1>
+    <p>This paragraph is a general sibling of the previous h1.</p>
+    <a href="#">Hover over this link</a>
+    <br>
+    <input type="text" placeholder="Focus on this input">
+    <br>
+    <a href="https://example.com" target="_blank">This link opens in a new tab</a>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Cursor Particles Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #0d1117;
+            overflow: hidden;
+            cursor: none;
+        }
+        .particle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: #ff9800;
+            border-radius: 50%;
+            pointer-events: none;
+            box-shadow: 0 0 8px rgba(255, 152, 0, 0.8);
+            animation: fadeOut 2s linear forwards;
+        }
+        .center-cursor {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pointer {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            position: absolute;
+            transform-origin: center;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="center-cursor">
+        <div class="pointer" id="pointer"></div>
+    </div>
+    <script>
+        const pointer = document.getElementById("pointer");
+
+        document.addEventListener("mousemove", (event) => {
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+            const angle = Math.atan2(event.clientY - centerY, event.clientX - centerX);
+            pointer.style.transform = `rotate(${angle}rad)`;
+
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement("div");
+                    particle.classList.add("particle");
+                    document.body.appendChild(particle);
+
+                    particle.style.left = `${event.clientX}px`;
+                    particle.style.top = `${event.clientY}px`;
+
+                    const size = Math.random() * 6 + 3;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+
+                    const colors = ['#ff9800', '#ff5722', '#ffc107', '#ffeb3b'];
+                    particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+                    const xMovement = (Math.random() - 0.5) * 1.5;
+                    const yMovement = (Math.random() - 0.5) * 1.5;
+
+                    particle.style.transform = `translate(${xMovement}px, ${yMovement}px)`;
+
+                    setTimeout(() => {
+                        particle.remove();
+                    }, 2000);
+                }, i * 50);
+            }
+        });
+    </script>
+</body>
+</html>
