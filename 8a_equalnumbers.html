@@ -1,0 +1,26 @@
+<!--Write a program which asks the user to enter three integers, obtains the numbers from the user and outputs HTML text that displays the larger number followed by the words “LARGER NUMBER” in an information message dialog. If the numbers are equal, output HTML text as “EQUAL NUMBERS”.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Numbers</title>
+    <script>
+        function compareNumbers() {
+            const num1 = parseInt(prompt("Enter the first integer:"));
+            const num2 = parseInt(prompt("Enter the second integer:"));
+            const num3 = parseInt(prompt("Enter the third integer:"));
+
+            if (num1 === num2 && num2 === num3) {
+                alert("EQUAL NUMBERS");
+            } else {
+                const largest = Math.max(num1, num2, num3);
+                alert(`${largest} LARGER NUMBER`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="compareNumbers()">Compare Numbers</button>
+</body>
+</html>

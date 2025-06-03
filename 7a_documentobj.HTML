@@ -1,0 +1,30 @@
+<!--Write a program using document object properties and methods.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+</head>
+<body>
+    <h1 id="header">Welcome to Document Object Example</h1>
+    <p id="paragraph">This is a sample paragraph.</p>
+    <button onclick="modifyContent()">Click Me</button>
+
+    <script>
+        function modifyContent() {
+            // Accessing and modifying the title of the document
+            document.title = "Modified Document Title";
+
+            // Accessing and modifying an element by ID
+            const header = document.getElementById("header");
+            header.textContent = "Header Modified Using Document Object";
+
+            // Accessing and modifying a paragraph
+            const paragraph = document.getElementById("paragraph");
+            paragraph.textContent = "This paragraph has been updated.";
+
+            // Logging the URL of the document
+            console.log("Document URL: " + document.URL);
+        }
+    </script>
+</body>
+</html>

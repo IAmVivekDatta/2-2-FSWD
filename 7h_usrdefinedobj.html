@@ -1,0 +1,58 @@
+<!--Write a program to explain user-defined object by using properties, methods, accessors, constructors and display.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Defined Object</title>
+</head>
+<body>
+    <h1>User-Defined Object Example</h1>
+    <div id="output"></div>
+
+    <script>
+        // Constructor function for a user-defined object
+        function Person(firstName, lastName, age) {
+            // Properties
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.age = age;
+
+            // Method
+            this.getFullName = function() {
+                return this.firstName + " " + this.lastName;
+            };
+
+            // Accessor (getter)
+            this.getAge = function() {
+                return this.age;
+            };
+
+            // Accessor (setter)
+            this.setAge = function(newAge) {
+                if (newAge > 0) {
+                    this.age = newAge;
+                } else {
+                    console.error("Age must be a positive number.");
+                }
+            };
+        }
+
+        // Create an instance of the Person object
+        const person1 = new Person("John", "Doe", 25);
+
+        // Display properties and methods
+        const outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = `
+            <p>Full Name: ${person1.getFullName()}</p>
+            <p>Age: ${person1.getAge()}</p>
+        `;
+
+        // Update age using the setter
+        person1.setAge(30);
+
+        // Display updated age
+        outputDiv.innerHTML += `<p>Updated Age: ${person1.getAge()}</p>`;
+    </script>
+</body>
+</html>

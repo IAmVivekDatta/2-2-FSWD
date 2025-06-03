@@ -1,0 +1,36 @@
+<!--Write a program to explain the different ways for displaying output.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Displaying Output</title>
+</head>
+<body>
+    <h1>Different Ways to Display Output in JavaScript</h1>
+
+    <h2>1. Using document.write()</h2>
+    <script>
+        document.write("This is output using document.write().<br>");
+    </script>
+
+    <h2>2. Using console.log()</h2>
+    <p>Check the browser console for this output.</p>
+    <script>
+        console.log("This is output using console.log().");
+    </script>
+
+    <h2>3. Using alert()</h2>
+    <p>Click the button to see an alert box.</p>
+    <button onclick="showAlert()">Show Alert</button>
+    <script>
+        function showAlert() {
+            alert("This is output using alert().");
+        }
+    </script>
+
+    <h2>4. Using innerHTML</h2>
+    <p id="output"></p>
+    <script>
+        document.getElementById("output").innerHTML = "This is output using innerHTML.";
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--Write a program using array object properties and methods-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+</head>
+<body>
+    <h1>Array Object Properties and Methods</h1>
+    <script>
+        // Create an array
+        let fruits = ["Apple", "Banana", "Cherry", "Date"];
+
+        // Display the original array
+        document.write("<p>Original Array: " + fruits + "</p>");
+
+        // Use the length property
+        document.write("<p>Length of Array: " + fruits.length + "</p>");
+
+        // Use the push method to add an element
+        fruits.push("Elderberry");
+        document.write("<p>After Push: " + fruits + "</p>");
+
+        // Use the pop method to remove the last element
+        let removedFruit = fruits.pop();
+        document.write("<p>After Pop (Removed: " + removedFruit + "): " + fruits + "</p>");
+
+        // Use the shift method to remove the first element
+        let shiftedFruit = fruits.shift();
+        document.write("<p>After Shift (Removed: " + shiftedFruit + "): " + fruits + "</p>");
+
+        // Use the unshift method to add an element to the beginning
+        fruits.unshift("Fig");
+        document.write("<p>After Unshift: " + fruits + "</p>");
+
+        // Use the sort method to sort the array
+        fruits.sort();
+        document.write("<p>After Sort: " + fruits + "</p>");
+
+        // Use the reverse method to reverse the array
+        fruits.reverse();
+        document.write("<p>After Reverse: " + fruits + "</p>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!--Design a HTML having a text box and four buttons named Factorial, Fibonacci, Prime, and Palindrome. When a button is pressed an appropriate function should be called to display
+Factorial of that number
+Fibonacci series up to that number
+Prime numbers up to that number
+Is it palindrome or not-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+    <script>
+        function calculateFactorial() {
+            const num = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(num) || num < 0) {
+                alert('Please enter a valid non-negative number.');
+                return;
+            }
+            let factorial = 1;
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+            alert(`Factorial of ${num} is ${factorial}`);
+        }
+
+        function generateFibonacci() {
+            const num = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(num) || num < 0) {
+                alert('Please enter a valid non-negative number.');
+                return;
+            }
+            let fib = [0, 1];
+            for (let i = 2; i < num; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+            alert(`Fibonacci series up to ${num}: ${fib.slice(0, num).join(', ')}`);
+        }
+
+        function findPrimes() {
+            const num = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(num) || num < 2) {
+                alert('Please enter a number greater than or equal to 2.');
+                return;
+            }
+            const primes = [];
+            for (let i = 2; i <= num; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(i);
+            }
+            alert(`Prime numbers up to ${num}: ${primes.join(', ')}`);
+        }
+
+        function checkPalindrome() {
+            const num = document.getElementById('numberInput').value;
+            if (!num) {
+                alert('Please enter a valid number.');
+                return;
+            }
+            const reversed = num.split('').reverse().join('');
+            if (num === reversed) {
+                alert(`${num} is a palindrome.`);
+            } else {
+                alert(`${num} is not a palindrome.`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput" placeholder="Enter a number">
+    <br><br>
+    <button onclick="calculateFactorial()">Factorial</button>
+    <button onclick="generateFibonacci()">Fibonacci</button>
+    <button onclick="findPrimes()">Prime</button>
+    <button onclick="checkPalindrome()">Palindrome</button>
+</body>
+</html>

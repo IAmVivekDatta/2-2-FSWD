@@ -1,0 +1,36 @@
+<!--Write a program using regex object properties and methods.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Object Example</title>
+</head>
+<body>
+    <h1>Regex Object Properties and Methods</h1>
+    <script>
+        // Define a regex pattern
+        const regex = /hello/i; // Case-insensitive match for "hello"
+
+        // Test the regex pattern
+        const testString = "Hello, world!";
+        const isMatch = regex.test(testString);
+        console.log(`Does the string match? ${isMatch}`);
+
+        // Execute the regex pattern
+        const matchResult = regex.exec(testString);
+        if (matchResult) {
+            console.log(`Matched text: ${matchResult[0]}`);
+            console.log(`Match found at index: ${matchResult.index}`);
+        } else {
+            console.log("No match found.");
+        }
+
+        // Display regex properties
+        console.log(`Source: ${regex.source}`);
+        console.log(`Global: ${regex.global}`);
+        console.log(`Ignore Case: ${regex.ignoreCase}`);
+        console.log(`Multiline: ${regex.multiline}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" />
+    <br><br>
+    <button onclick="calculateFactorial()">Factorial</button>
+    <button onclick="generateFibonacci()">Fibonacci Series</button>
+    <button onclick="findPrimes()">Prime Numbers</button>
+    <button onclick="checkPalindrome()">Is Palindrome</button>
+    <br><br>
+    <div id="result"></div>
+    <script src="9a_funtion.js"></script>
+</body>
+</html>
+
+
+
+<!--
+
+<script>
+function calculateFactorial() {
+    const num = parseInt(document.getElementById('numberInput').value);
+    if (num < 0) return displayResult("Factorial is not defined for negative numbers.");
+    let fact = 1;
+    for (let i = 1; i <= num; i++) fact *= i;
+    displayResult(`Factorial of ${num} is ${fact}.`);
+}
+
+function generateFibonacci() {
+    const num = parseInt(document.getElementById('numberInput').value);
+    if (num < 1) return displayResult("Enter a positive number.");
+    let fib = [0, 1];
+    while (fib.length < num) fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+    displayResult(`Fibonacci series: ${fib.slice(0, num).join(', ')}.`);
+}
+
+function findPrimes() {
+    const num = parseInt(document.getElementById('numberInput').value);
+    if (num < 2) return displayResult("No primes less than 2.");
+    let primes = [];
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i)) primes.push(i);
+    }
+    displayResult(`Prime numbers: ${primes.join(', ')}.`);
+}
+
+function isPrime(n) {
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
+}
+
+function checkPalindrome() {
+    const num = document.getElementById('numberInput').value;
+    const isPal = num === num.split('').reverse().join('');
+    displayResult(`${num} is ${isPal ? '' : 'not '}a palindrome.`);
+}
+
+function displayResult(message) {
+    document.getElementById('result').innerText = message;
+}
+</script>                                                               -->

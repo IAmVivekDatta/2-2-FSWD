@@ -1,0 +1,50 @@
+<!--Create a webpage which uses prompt dialogue box to ask a voter for his name and age. Display the information in table format along with either the voter can vote or not-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Eligibility</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Prompt user for name and age
+        const name = prompt("Enter your name:");
+        const age = parseInt(prompt("Enter your age:"), 10);
+
+        // Determine voting eligibility
+        const canVote = age >= 18 ? "Yes" : "No";
+
+        // Create table dynamically
+        document.write(`
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Can Vote</th>
+                </tr>
+                <tr>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                    <td>${canVote}</td>
+                </tr>
+            </table>
+        `);
+    </script>
+</body>
+</html>

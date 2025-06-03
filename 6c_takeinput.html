@@ -1,0 +1,56 @@
+<!--Write a program to explain the different ways for taking input.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Methods</title>
+</head>
+<body>
+    <h1>Different Ways to Take Input</h1>
+
+    <!-- Text Input -->
+    <label for="textInput">Text Input:</label>
+    <input type="text" id="textInput" placeholder="Enter text here">
+    <br><br>
+
+    <!-- Radio Buttons -->
+    <label>Radio Input:</label>
+    <input type="radio" id="option1" name="radioGroup" value="Option 1">
+    <label for="option1">Option 1</label>
+    <input type="radio" id="option2" name="radioGroup" value="Option 2">
+    <label for="option2">Option 2</label>
+    <br><br>
+
+    <!-- Checkbox -->
+    <label>Checkbox Input:</label>
+    <input type="checkbox" id="check1" value="Check 1">
+    <label for="check1">Check 1</label>
+    <input type="checkbox" id="check2" value="Check 2">
+    <label for="check2">Check 2</label>
+    <br><br>
+
+    <!-- Dropdown -->
+    <label for="dropdown">Dropdown Input:</label>
+    <select id="dropdown">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <br><br>
+
+    <!-- Textarea -->
+    <label for="textarea">Textarea Input:</label>
+    <textarea id="textarea" rows="4" cols="50" placeholder="Enter multiline text here"></textarea>
+    <br><br>
+
+    <!-- Button -->
+    <button onclick="handleSubmit()">Submit</button>
+
+    <script>
+        function handleSubmit() {
+            alert("Inputs submitted!");
+        }
+    </script>
+</body>
+</html>

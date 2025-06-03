@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Denomination Calculator</title>
+</head>
+<body>
+    <h1>Bank Denomination Calculator</h1>
+    <form id="denominationForm">
+        <label for="amount">Enter the amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <button type="button" onclick="calculateDenomination()">Calculate</button>
+    </form>
+    <p id="denominationResult"></p>
+
+    <script>
+        function calculateDenomination() {
+            let amount = parseInt(document.getElementById('amount').value);
+            const denominations = [100, 50, 20, 10, 5, 2, 1];
+            const result = {};
+
+            denominations.forEach(denomination => {
+                result[denomination] = Math.floor(amount / denomination);
+                amount %= denomination;
+            });
+
+            const resultElement = document.getElementById('denominationResult');
+            resultElement.innerHTML = denominations
+                .map(denomination => `${result[denomination]}-${denomination}'s`)
+                .filter(entry => !entry.startsWith("0"))
+                .join(', ');
+        }
+    </script>
+</body>
+</html>

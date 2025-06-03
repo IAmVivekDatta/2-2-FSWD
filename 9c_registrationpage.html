@@ -1,0 +1,50 @@
+<!--Write a program to validate the following fields in a registration page
+Name (start with alphabet and followed by alphanumeric and the length should not be less than 6 characters)
+Mobile (only numbers and length 10 digits)
+E-mail (should contain format like xxxxxxx@xxxxxx.xxx)-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const mobile = document.getElementById("mobile").value;
+            const email = document.getElementById("email").value;
+
+            if (!/^[A-Za-z][A-Za-z0-9]{5,}$/.test(name)) {
+                alert("Invalid Name: Must start with a letter, followed by alphanumeric characters, and be at least 6 characters.");
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(mobile)) {
+                alert("Invalid Mobile: Must be exactly 10 digits.");
+                return false;
+            }
+
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                alert("Invalid Email: Must follow the format xxxxxxx@xxxxxx.xxx.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Page</h2>
+    <form onsubmit="return validateForm()">
+        <label>Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label>Mobile:</label>
+        <input type="text" id="mobile" required><br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email" required><br><br>
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

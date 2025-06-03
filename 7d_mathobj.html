@@ -1,0 +1,31 @@
+<!--Write a program using math object properties and methods.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object Example</title>
+</head>
+<body>
+    <h1>Math Object Properties and Methods</h1>
+    <p id="output"></p>
+
+    <script>
+        // Using Math object properties and methods
+        const pi = Math.PI; // Math property
+        const squareRoot = Math.sqrt(16); // Math method
+        const randomNum = Math.random(); // Math method
+        const roundedValue = Math.round(4.7); // Math method
+        const powerValue = Math.pow(2, 3); // Math method
+
+        // Displaying the results
+        document.getElementById("output").innerHTML = `
+            <strong>Math.PI:</strong> ${pi} <br>
+            <strong>Math.sqrt(16):</strong> ${squareRoot} <br>
+            <strong>Math.random():</strong> ${randomNum} <br>
+            <strong>Math.round(4.7):</strong> ${roundedValue} <br>
+            <strong>Math.pow(2, 3):</strong> ${powerValue}
+        `;
+    </script>
+</body>
+</html>

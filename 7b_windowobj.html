@@ -1,0 +1,43 @@
+<!--Write a program using window object properties and methods.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Example</title>
+</head>
+<body>
+    <h1>Window Object Properties and Methods</h1>
+    <button onclick="showWindowDetails()">Show Window Details</button>
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="closeNewWindow()">Close New Window</button>
+    <p id="details"></p>
+
+    <script>
+        let newWindow;
+
+        function showWindowDetails() {
+            const details = `
+                Window Width: ${window.innerWidth}px<br>
+                Window Height: ${window.innerHeight}px<br>
+                Screen Width: ${window.screen.width}px<br>
+                Screen Height: ${window.screen.height}px<br>
+                Location: ${window.location.href}<br>
+                Protocol: ${window.location.protocol}<br>
+            `;
+            document.getElementById('details').innerHTML = details;
+        }
+
+        function openNewWindow() {
+            newWindow = window.open('', '', 'width=400,height=300');
+            newWindow.document.write('<h1>New Window</h1><p>This is a new window.</p>');
+        }
+
+        function closeNewWindow() {
+            if (newWindow && !newWindow.closed) {
+                newWindow.close();
+            } else {
+                alert('No open window to close.');
+            }
+        }
+    </script>
+</body>
+</html>

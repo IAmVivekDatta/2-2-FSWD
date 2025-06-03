@@ -1,0 +1,38 @@
+<!--Write a program using string object properties and methods.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+</head>
+<body>
+    <h1>String Object Properties and Methods</h1>
+    <script>
+        // Define a string
+        let str = "Hello, World!";
+
+        // Display the original string
+        document.write("<p>Original String: " + str + "</p>");
+
+        // String length property
+        document.write("<p>Length of String: " + str.length + "</p>");
+
+        // Convert to uppercase
+        document.write("<p>Uppercase: " + str.toUpperCase() + "</p>");
+
+        // Convert to lowercase
+        document.write("<p>Lowercase: " + str.toLowerCase() + "</p>");
+
+        // Find the index of a substring
+        document.write("<p>Index of 'World': " + str.indexOf("World") + "</p>");
+
+        // Extract a substring
+        document.write("<p>Substring (7, 12): " + str.substring(7, 12) + "</p>");
+
+        // Replace a substring
+        document.write("<p>Replace 'World' with 'JavaScript': " + str.replace("World", "JavaScript") + "</p>");
+
+        // Split the string
+        document.write("<p>Split by ', ': " + str.split(", ") + "</p>");
+    </script>
+</body>
+</html>
