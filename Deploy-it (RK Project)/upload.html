@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload | Deploy It</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Deploy It</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="upload.html">Upload</a></li>
+      <li><a href="preview.html">Preview</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main style="margin-top:90px;">
+    <div class="form" style="max-width:500px;">
+      <h2 style="text-align:center; margin-bottom:1.5rem;">Upload Project</h2>
+      <!-- Drag-and-drop area -->
+      <div class="drop-zone" tabindex="0">
+        Drag & Drop your project files here<br>or click to select
+        <input type="file" id="fileElem" multiple style="display:none" />
+      </div>
+      <ul class="file-list"></ul>
+      <button class="btn" style="width:100%;margin-top:1rem;">Deploy</button>
+    </div>
+  </main>
+</body>
+</html>

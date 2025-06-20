@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History | Deploy It</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Deploy It</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="upload.html">Upload</a></li>
+      <li><a href="preview.html">Preview</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="profile.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <main style="margin-top:90px;">
+    <div class="table-container">
+      <h2 style="margin-bottom:1rem;">Upload/Deploy History</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>project-v1.zip</td>
+            <td>2025-06-20</td>
+            <td style="color:limegreen;">Success</td>
+          </tr>
+          <tr>
+            <td>my-app.tar.gz</td>
+            <td>2025-06-18</td>
+            <td style="color:orange;">Pending</td>
+          </tr>
+          <tr>
+            <td>demo-site.zip</td>
+            <td>2025-06-15</td>
+            <td style="color:crimson;">Failed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
