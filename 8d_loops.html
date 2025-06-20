@@ -1,27 +1,36 @@
-<!--Write aprogram to print data in object using for-in, for-each and for-of loops
+<!--Write a program to print data in object using for-in, for-each and for-of loops
 -->
-<script>
-    const data = {
-        name: "John",
-        age: 25,
-        city: "New York"
-    };
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Object Data using Loops</title>
+</head>
+<body>
+    <h2>Print Object Data using for-in, forEach, and for-of Loops</h2>
+    <script>
+        const data = {
+            name: "John",
+            age: 25,
+            city: "New York"
+        };
 
-    // Using for-in loop
-    document.write("<h3>Using for-in loop:</h3>");
-    for (let key in data) {
-        document.write(`${key}: ${data[key]}<br>`);
-    }
+        // Using for-in loop
+        document.write("<h3>Using for-in loop:</h3>");
+        for (let key in data) {
+            document.write(`${key}: ${data[key]}<br>`);
+        }
 
-    // Using forEach loop
-    document.write("<h3>Using forEach loop:</h3>");
-    Object.entries(data).forEach(([key, value]) => {
-        document.write(`${key}: ${value}<br>`);
-    });
+        // Using forEach loop
+        document.write("<h3>Using forEach loop:</h3>");
+        Object.entries(data).forEach(([key, value]) => {
+            document.write(`${key}: ${value}<br>`);
+        });
 
-    // Using for-of loop
-    document.write("<h3>Using for-of loop:</h3>");
-    for (let [key, value] of Object.entries(data)) {
-        document.write(`${key}: ${value}<br>`);
-    }
-</script>
+        // Using for-of loop
+        document.write("<h3>Using for-of loop:</h3>");
+        for (let [key, value] of Object.entries(data)) {
+            document.write(`${key}: ${value}<br>`);
+        }
+    </script>
+</body>
+</html>
